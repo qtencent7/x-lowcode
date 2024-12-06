@@ -50,6 +50,7 @@ function CustomLib(_: any, ref: any) {
 
   const handleClick = async (item: ILibPublish) => {
     // 生成默认配置
+    debugger
     const { config, events, methods = [] }: any = await loadModule(item.configUrl);
     const newId = createId(item.tag);
     if (selectedElement) {

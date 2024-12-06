@@ -61,3 +61,8 @@ export const updateLib = (params: { reactCode: string; lessCode: string; configC
 export const publish = (params: { libId: number; reactCompile: string; cssCompile?: string; configCode: string; releaseHash: string }) => {
   return request.post('/lib/publish', params);
 };
+
+// 删除组件
+export const deleteLib = (id: number) => {
+  return request.post(`/lib/delete/${id}`);
+};

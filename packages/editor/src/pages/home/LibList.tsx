@@ -1,8 +1,8 @@
-import { Button, Skeleton, Space, Pagination, Form, Empty } from 'antd';
+import { Button, Skeleton, Space, Pagination, Form, Empty, Modal } from 'antd';
 import { useEffect, useRef, useState } from 'react';
-import { UserOutlined, CodeOutlined, PlusOutlined } from '@ant-design/icons';
+import { UserOutlined, CodeOutlined, PlusOutlined, DeleteOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
-import { getLibList } from '@/api/lib';
+import { getLibList, deleteLib } from '@/api/lib';
 import { usePageStore } from '@/stores/pageStore';
 import { message } from '@/utils/AntdGlobal';
 import SearchBar from '@/components/Searchbar/SearchBar';
@@ -75,6 +75,23 @@ export default () => {
   };
 
   const LibItem = ({ item }: { item: any }) => {
+    // 删除组件
+    const handleDelete = async (e: React.MouseEvent) => {
+      e.stopPropagation();
+      Modal.confirm({
+        title: '确认删除',
+        content: '删除后无法恢复，是否确认删除？',
+        okText: '确认',
+        okButtonProps: { danger: true },
+        cancelText: '取消',
+        onOk: async () => {
+          await deleteLib(item.id);
+          message.success('删除成功');
+          getList(current, pageSize);
+        },
+      });
+    };
+
     return (
       <div className={style.item} key={item.id}>
         <div className={style.itemInfo}>
@@ -90,9 +107,14 @@ export default () => {
         </div>
         <Space>
           {userInfo.userId === item.userId ? (
-            <Button type="primary" icon={<CodeOutlined />} onClick={() => handleEdit('edit', item.id)}>
-              开发
-            </Button>
+            <>
+              <Button type="primary" icon={<CodeOutlined />} onClick={() => handleEdit('edit', item.id)}>
+                开发
+              </Button>
+              <Button type="primary" danger icon={<DeleteOutlined />} onClick={handleDelete}>
+                删除
+              </Button>
+            </>
           ) : (
             <Button type="primary" icon={<PlusOutlined />} onClick={() => handleEdit('install', item.id)}>
               安装
