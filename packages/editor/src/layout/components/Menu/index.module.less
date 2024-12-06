@@ -1,0 +1,23 @@
+// 修改系统组件：antd的样式
+.leftTool {
+  :global {
+    .ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-tab {
+      padding: 8px;
+      justify-content: center;
+    }
+    .ant-tabs-tab .anticon:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+}
+// 组件大纲
+.outlinePanel {
+  height: calc(100vh - 110px);
+  overflow-y: auto;
+  :global {
+    .ant-tree .ant-tree-node-selected {
+      background-color: #9d5cff;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "private": false,
+  "name": "marsview",
+  "description": "Marsview 是一款开源的低代码平台，面向中后台管理系统。支持可视化配置、逻辑编排、事件流交互、数据源配置等。",
+  "version": "6.2.3",
+  "license": "MIT",
+  "author": {
+    "name": "河畔一角",
+    "email": "sunnyboysoft@163.com",
+    "url": "http://www.marsview.cc"
+  },
+  "keywords": [
+    "marsview",
+    "mars",
+    "lowcode",
+    "react",
+    "antd",
+    "react-dnd",
+    "中后台低代码平台",
+    "低代码平台",
+    "可视化搭建"
+  ],
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "start:editor": "pnpm --filter editor start",
+    "build:editor": "pnpm --filter editor build",
+    "deploy:editor": "rimraf -rf dist/editor && pnpm build:editor && cross-env PROJECT=editor node ./deploy.js",
+    "start:admin": "pnpm --filter admin start",
+    "build:admin": "pnpm --filter admin build",
+    "deploy:admin": "rimraf -rf dist/admin && pnpm build:admin && cross-env PROJECT=admin node ./deploy.js",
+    "start:docs": "pnpm --filter docs dev",
+    "build:docs": "pnpm --filter docs build",
+    "deploy:docs": "pnpm build:docs && cross-env PROJECT=docs node ./deploy.js",
+    "build": "pnpm --filter editor build && pnpm --filter admin build && pnpm --filter docs build",
+    "deploy": "rimraf -rf dist && pnpm build && cross-env PROJECT=all node ./deploy.js",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "release:major": "standard-version --release-as major",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "homepage": "http://www.marsview.cc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JackySoft/marsview.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JackySoft/marsview/issues"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.2.6",
+    "@ant-design/plots": "^1.2.6",
+    "@types/qs": "^6.9.15",
+    "ahooks": "^3.7.8",
+    "antd": "^5.21.1",
+    "axios": "^0.27.2",
+    "classnames": "^2.5.1",
+    "copy-to-clipboard": "^3.3.3",
+    "less": "^4.2.0",
+    "lodash-es": "^4.17.21",
+    "qs": "^6.12.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-error-boundary": "^4.0.13",
+    "react-quill": "^2.0.0",
+    "react-responsive": "^10.0.0",
+    "react-router-dom": "^6.21.2",
+    "rimraf": "^6.0.1",
+    "standard-version": "^9.5.0",
+    "styled-components": "^6.1.13",
+    "vite": "^5.0.8",
+    "vite-plugin-externals-new": "^1.5.5",
+    "vite-plugin-svgr": "^4.2.0",
+    "zustand": "^4.4.7"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.7",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "cross-env": "^7.0.3",
+    "lint-staged": "^10.0.7",
+    "only-allow": "^1.2.1",
+    "scp2": "^0.5.0",
+    "typescript": "latest",
+    "yorkie": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "standard-version": {
+    "types": [
+      {
+        "type": "feat",
+        "section": "Features"
+      },
+      {
+        "type": "fix",
+        "section": "Bug Fixes"
+      },
+      {
+        "type": "docs",
+        "section": "Documentation"
+      },
+      {
+        "type": "style",
+        "section": "Styles"
+      },
+      {
+        "type": "chore",
+        "section": "Others"
+      },
+      {
+        "type": "build",
+        "section": "Build System"
+      },
+      {
+        "type": "perf",
+        "section": "Performance Improvements"
+      },
+      {
+        "type": "refactor",
+        "section": "Code Refactoring"
+      },
+      {
+        "type": "improvement",
+        "section": "Feature Improvements"
+      },
+      {
+        "type": "impr",
+        "section": "Feature Improvements"
+      },
+      {
+        "type": "test",
+        "section": "Tests"
+      },
+      {
+        "type": "ci",
+        "section": "CI"
+      }
+    ],
+    "scopes": []
+  }
+}

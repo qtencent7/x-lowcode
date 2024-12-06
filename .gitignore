@@ -1,0 +1,18 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+packages/**/*/node_modules
+/npm-debug.log*
+/yarn-error.log
+/package-lock.json
+# production
+/dist
+/shell
+# misc
+.DS_Store
+cache
+/backend/koa/node_modules
+/backend/java/logs
+/backend/java/build
+/deploy.js

@@ -1,0 +1,87 @@
+.project,
+.pageList,
+.libWrap,
+.workflow {
+  padding: 30px 20px;
+  height: calc(100vh - 64px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  .pagesContent {
+    flex: 1;
+  }
+}
+.cardBody {
+  cursor: pointer;
+}
+.itemEnv {
+  position: absolute;
+  top: 8px;
+  right: 0px;
+}
+.itemTitle {
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.itemRemark {
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  color: var(--mars-theme-text-secondary-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.updateUser {
+  font-size: 13px;
+  color: #9c9a9a;
+}
+
+.project,
+.pageList {
+  :global {
+    .ant-card-body {
+      padding-inline: 12px;
+      padding-bottom: 6px;
+    }
+    .ant-card-actions li {
+      margin: 8px 0;
+    }
+  }
+}
+// 组件库
+.libWrap {
+  .search {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 10px;
+    border-bottom: 1px solid var(--mars-theme-card-border-color);
+    height: 110px;
+    .itemInfo {
+      .remark {
+        color: #505052;
+      }
+      p {
+        line-height: 30px;
+        color: var(--mars-theme-text-secondary-color);
+      }
+    }
+  }
+  .libList {
+    flex: 1;
+  }
+}
+// 模板页面
+.searchBox {
+  width: 50%;
+  margin: 0 auto 30px;
+}
