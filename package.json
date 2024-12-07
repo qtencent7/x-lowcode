@@ -1,21 +1,13 @@
 {
   "private": false,
-  "name": "marsview",
-  "description": "Marsview 是一款开源的低代码平台，面向中后台管理系统。支持可视化配置、逻辑编排、事件流交互、数据源配置等。",
+  "name": "x-lowcode",
+  "description": "x-lowcode 是一款开源的低代码平台，面向中后台管理系统。支持可视化配置、逻辑编排、事件流交互、数据源配置等。",
   "version": "6.2.3",
   "license": "MIT",
-  "author": {
-    "name": "河畔一角",
-    "email": "sunnyboysoft@163.com",
-    "url": "http://www.marsview.cc"
-  },
   "keywords": [
-    "marsview",
-    "mars",
     "lowcode",
     "react",
     "antd",
-    "react-dnd",
     "中后台低代码平台",
     "低代码平台",
     "可视化搭建"
