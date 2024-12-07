@@ -1,198 +1,37 @@
-<div align="center">
+## 项目介绍
 
-<a href="http://marsview.cc/"><img src="https://marsview.cdn.bcebos.com/mars-logo.png" width="150" alt="marsview logo"></a>
+本项目修改自[marsview](https://github.com/JackySoft/marsview)，修改内容如下：
 
-# Marsview Low Code Platform
+changelog: 2024.12.07
 
-Make building simpler and development more efficient
+1，新建SQL表<br/>
+2，插入一条users表的记录，创建管理员账户<br/>
+3，修改主题色为蓝色<br/>
+4，解决导入自定义组件时，报错问题<br/>
+5，解决，创建项目，项目不显示的问题<br/>
+6，解决自定义组件只能创建两个的限制<br/>
+7，将OSS对象存储服务改为本地存储，不花一分钱<br/>
 
-[Project documentation](http://docs.marsview.com.cn/) |
-[Open source repository](https://github.com/JackySoft/marsview) |
-[Communication group](https://imgcloud.cdn.bcebos.com/f35323e9a2625a85909cb6f02.png)
 
-</div>
+marsview是一个低代码开发平台，具有自定义组件，开发页面，保存页面的功能，发布预览默认会发布到marsview作者的自由域名系统下，且会报500错误。我目前正在考虑将页面发布到本地，方面调试。
 
-<div align="center">
+## 如何搭建项目
 
-![GitHub Repo stars](https://img.shields.io/github/stars/JackySoft/marsview)
+1，下载[x-lowcode](https://github.com/qtencent7/x-lowcode)和[x-lowcode-server](https://github.com/qtencent7/x-lowcode-server)的代码<br/>
+2，pnpm i<br/>
+3，找到server项目的sql文件夹，把里面的SQL脚本在navicat里面执行一下<br/>
+4，修改server项目根目录下的config.js文件中的数据库账户密码<br/>
+5，启动后端项目：pnpm run dev<br/>
+6，启动前端项目：pnpm run start:editor<br/>
+7，使用admin@qq.com/admin123这个账号密码进行登录<br/>
 
-![GitHub package.json version](https://img.shields.io/github/package-json/v/JackySoft/marsview)
-![GitHub License](https://img.shields.io/github/license/JackySoft/marsview)
-![version](https://img.shields.io/npm/v/amis)
-![language](https://img.shields.io/github/languages/top/JackySoft/marsview)
-![last](https://img.shields.io/github/last-commit/JackySoft/marsview.svg)
+## star 一下
+魔改不易，请start鼓励一下作者
 
-English | [中文](./README.zh-CN.md)
+### 联系我
+对于使用过程中的任何想法，都可以跟我联系。联系请备注“x-lowcode”
+![alt text](c6643ec5ae992683d0e3b8a4b796d9d.jpg)
 
-</div>
 
-## Intro 🚀
 
-Marsview is a low code visualization platform for middle and backend development. Developers can create projects, pages, and components on the platform, supporting event interaction, interface calling, data linkage, and logical orchestration. Developers can also quickly integrate them into their own business systems through the microApp front-end framework.
 
-## Online use 🛸
-
-- 🌍 [Marsview](https://www.marsview.com.cn/)
-
-|                                                                        |                                                                        |
-| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| ![Demo](https://imgcloud.cdn.bcebos.com/09d56ca14e47f7880d67bae37.png) | ![Demo](https://imgcloud.cdn.bcebos.com/09d56ca14e47f7880d67bae38.png) |
-| ![Demo](https://imgcloud.cdn.bcebos.com/09d56ca14e47f7880d67bae39.png) | ![Demo](https://imgcloud.cdn.bcebos.com/09d56ca14e47f7880d67bae3a.png) |
-| ![Demo](https://imgcloud.cdn.bcebos.com/09d56ca14e47f7880d67bae3b.png) | ![Demo](https://imgcloud.cdn.bcebos.com/09d56ca14e47f7880d67bae3c.png) |
-| ![Demo](https://imgcloud.cdn.bcebos.com/09d56ca14e47f7880d67bae3d.png) | ![Demo](https://imgcloud.cdn.bcebos.com/09d56ca14e47f7880d67bae3e.png) |
-
-## Platform Features 💥
-
-- **project:**
-  Project configuration (theme color, menu layout, system logo, breadcrumbs...), complete RBAC permission management.
-- **page:** Page creation, page theme, page configuration, component drag and drop, style configuration, event flow configuration, logical orchestration, interface configuration.
-  The page supports integration into traditional projects through microservices, whether you are Vue or React.
-- **permission:** The project and page support developer and visitor permission configuration, and the project also supports RBAC control at the menu and button level.
-- **Custom Components:** When the components provided by the platform cannot meet the requirements, business components can be customized and developed. The platform will compile them online and upload them to the cloud. At the same time, in the editor interface, custom components can be loaded by clicking on them.
-- **interface:** Unified interface management, global interceptors, return structure modifications, etc. Support GET, POST, PUT, DELETE and other request methods, and support dynamic parameter passing through interfaces.
-- **event flow:** High difficulty business logic orchestration can be completed through event flow, such as component linkage, component visibility and concealment, component disabling, custom logic processing, interface calling, route jumping, etc.
-- **environment:** The platform supports three environments, STG, PRE, and PRD. The page can only be accessed on the user side after being published to the corresponding environment.
-- **rollback：** After the platform is released, the page supports one click rollback.
-- **Micro front-end integration:** If you are a traditional Vue project and want to use this platform, you can first build a page on the platform and publish it to the PRD environment, and finally integrate it through microservices.
-- The backend provides Node versions, with MySQL as the database.
-
-## Local development 👨‍💻
-
-### Frontend
-
-```bash
-git clone https://github.com/JackySoft/marsview.git
-```
-
-Project Description
-
-| directory          | description                                 |
-| ------------------ | ------------------------------------------- |
-| packges            | Front end project, including 4 sub projects |
-| packges/admin      | Project Access Terminal                     |
-| packges/editor     | Editor end                                  |
-| packages/materials | Component materials, for admin use only     |
-| packages/docs      | Low code usage documentation                |
-
-### Backend
-
-```bash
-git clone https://github.com/JackySoft/marsview-backend.git
-```
-
-Project Description
-
-| directory      | description                |
-| -------------- | -------------------------- |
-| backend        | Backend services           |
-| backend/config | Project configuration file |
-
-### Deploy Documentation
-
-[Documentation](https://docs.marsview.com.cn/home.html)
-
-### Quick start
-
-Running requires a node environment, it is recommended to have a version of 'node: 18' or higher. Use `pnpm` as a dependency management tool. If it is not installed, please execute the installation command `npm install - g pnpm` first.
-
-1. Start the front-end
-
-```bash
-
-# Install dependencies (if the installation dependency time is too long, please configure the image source first)
-pnpm i
-# Launch Editor
-pnpm start:editor
-```
-
-> Note: By default, online interfaces are used. If private deployment is required, please refer to the private deployment documentation.
-
-[Documentation](http://docs.marsview.com.cn/deploy.html)
-
-### Synchronization Code
-
-The project is in a high-speed development stage with fast version updates. It is recommended that developers set up upstream remote branches after the fork and clone projects to pull the latest code and synchronize it locally at any time.
-
-```bash
-# add upstream
-
-git remote add upstream https://github.com/JackySoft/marsview
-
-# Capture the source repository and modify the main branch
-
-git fetch upstream main
-
-# Switch Branch
-
-git checkout main
-
-# Merge remote branches
-
-git merge upstream/main
-```
-
-## Team Recruitment
-
--Passionate about programming and open source, with a strong interest in low code.
--Continuous passion and long termism.
--After meeting the requirements, they will enter the internal team open source group and share profits in the future.
-
-## Activities 🆕
-
-- 2024-10-30: Marsview open-source backend service.
-- 2024-09-27: Online email registration service.
-- 2024-08-30: MarsView Published in [Ruan Yifeng Weekly](https://www.ruanyifeng.com/blog/2024/08/weekly-issue-315.html)
-- 2024-08-27: MarsAI v1.0 is launched, and auxiliary code generation is implemented in custom writing.
-- 2024-08-17: Project [Online Document](http://docs.marsview.com.cn/) Publish.
-- 2024-08-13: Open source article ranks first on the hot list of the Gold Mining Forum.
-- 2024-08-10: Project open source
-  - Announce project open source, publish open source article: [My low code platform Marsview is finally open source](https://juejin.cn/post/7401009128204894244)
-- 2024-07-16: The project is previewed for the first time on the Gold Mining Forum
-  - Release trailer article: [I spent 8 months creating a high-quality zero code platform called Mars](https://juejin.cn/post/7392071348480835595)
-
-## Update log 📅
-
-View [Update Log](https://github.com/JackySoft/marsview/blob/master/CHANGELOG.md) Get the latest updates.
-
-## Project communication 🏘️
-
-If you encounter any technical or commercial authorization issues during use, please feel free to contact me via WeChat:
-
-<img src="https://imgcloud.cdn.bcebos.com/f35323e9a2625a85909cb6f02.png"  width="200">
-
-## Participate in donation ✨
-
-[Please treat me to a cup of coffee ☕️](https://afdian.com/a/marsview)
-
-Thank you to the following brothers for their donation:
-
-| name            | profile picture                                                    |
-| --------------- | ------------------------------------------------------------------ |
-| 钢铁侠          | <img src="http://docs.marsview.com.cn/sponsor/10.png"  width="50"> |
-| 物联网方案-肖工 | <img src="http://docs.marsview.com.cn/sponsor/3.png"  width="50">  |
-
-## 🤝 Participate and contribute
-
-We warmly welcome contributions in various forms. If you are interested in contributing code, you can check out our GitHub [Issues](https://github.com/JackySoft/marsview/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc),Show us your creativity and creativity.
-
-How do you want to become a developer? Welcome to submit `PR`. Please refer to the `PR` specification for submission: [Pull Rquest](.github/PULL_REQUEST_TEMPLATE.md)
-
-<a href="https://github.com/JackySoft/marsview/graphs/contributors" target="_blank">
-<img src="https://contrib.rocks/image?repo=JackySoft/marsview">
-</a>
-
-## Star History 🌟
-
-If you find this project helpful to you, please consider [GitHub](https://github.com/JackySoft/marsview) Give it one ⭐️ !
-<a href="https://github.com/JackySoft/marsview/stargazers" target="_blank" style="display: block" align="center">
-<picture>
-
-<source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=JackySoft/marsview&type=Date&theme=dark" />
-<source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=JackySoft/marsview&type=Date" />
-<img alt="Star History Chart" src="https://api.star-history.com/svg?repos=JackySoft/marsview&type=Date" />
-</picture>
-</a>
-
-## licence 📄
-
-This project is authorized under the MIT License - for more information, please refer to [LICENSE](https://github.com/JackySoft/marsview/blob/main/LICENSE) the document.
