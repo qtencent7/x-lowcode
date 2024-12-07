@@ -21,6 +21,10 @@ export default defineConfig({
         // target: 'http://mars-api.marsview.cc',
         changeOrigin: true,
       },
+      '/uploads': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+      }
     },
   },
   resolve: {
