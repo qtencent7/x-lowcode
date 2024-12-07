@@ -36,8 +36,8 @@ const EditLayout = () => {
             components: {
               Splitter: {
                 colorFill: '#e8e9eb',
-                controlItemBgActive: '#7d33ff',
-                controlItemBgActiveHover: '#7d33ff',
+                controlItemBgActive: '#1890ff',
+                controlItemBgActiveHover: '#1890ff',
               },
             },
           }}

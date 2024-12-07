@@ -249,12 +249,12 @@ export default function PublishHistory() {
             base07: 'rgb(129 2 255)',
             base08: 'rgb(129 2 255)',
             base09: '#1677ff',
-            base0A: '#7D33FF',
-            base0B: '#7D33FF',
-            base0C: '#7D33FF',
-            base0D: '#7D33FF',
-            base0E: '#7D33FF',
-            base0F: '#7D33FF',
+            base0A: '#1890ff',
+            base0B: '#1890ff',
+            base0C: '#1890ff',
+            base0D: '#1890ff',
+            base0E: '#1890ff',
+            base0F: '#1890ff',
           }}
           collapsed={2}
           displayDataTypes={false}

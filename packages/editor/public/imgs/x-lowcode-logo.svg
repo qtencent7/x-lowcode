@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="20" cy="20" r="20" fill="#1890ff"/>
+  
+  <!-- X Letter -->
+  <path d="M12 12L28 28M28 12L12 28" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Code Brackets -->
+  <path d="M8 16L4 20L8 24" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 16L36 20L32 24" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

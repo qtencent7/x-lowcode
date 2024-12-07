@@ -106,7 +106,7 @@ export default () => {
               return (
                 <List.Item
                   actions={[
-                    item.id === pageId ? <Tag color="#7D33FF">当前</Tag> : '',
+                    item.id === pageId ? <Tag color="#1890ff">当前</Tag> : '',
                     <DeleteOutlined onClick={() => handleDelete(item.id)} />,
                     <EditOutlined onClick={() => handleAdd(item)} />,
                   ]}

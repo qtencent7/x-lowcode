@@ -44,7 +44,7 @@ const VariableBind: React.FC<Props> = ({ value, onChange, ...props }: any) => {
             onClick={() => {
               selectRef.current?.open(val?.value);
             }}
-            style={{ color: value?.type === 'variable' ? '#7D33FF' : '' }}
+            style={{ color: value?.type === 'variable' ? '#1890ff' : '' }}
           />
         }
         placeholder="请选择变量"

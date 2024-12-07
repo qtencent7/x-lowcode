@@ -102,7 +102,7 @@ export default function Login() {
         <div className={style.form}>
           {type === 'login' ? (
             <div className={style.title}>
-              <img src="/imgs/mars-logo.png" width={45} />
+              <img src="/imgs/x-lowcode-logo.svg" width={45} />
               <span>登录</span>
             </div>
           ) : (

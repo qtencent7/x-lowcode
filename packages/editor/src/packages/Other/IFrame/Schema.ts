@@ -43,7 +43,7 @@ export default {
     style: {
       position: 'relative',
       overflow: 'hidden',
-      border: '5px solid #7d33ff',
+      border: '5px solid #1890ff',
       width: '100%',
       height: '600px',
     },

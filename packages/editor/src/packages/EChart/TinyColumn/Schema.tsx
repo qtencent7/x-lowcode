@@ -89,7 +89,7 @@ export default {
         lineWidth: 2,
         fillOpacity: 1,
       },
-      color: '#7d33ff',
+      color: '#1890ff',
     },
     // 组件样式
     style: {

@@ -213,8 +213,8 @@ const Header = memo(() => {
     <>
       <Layout.Header className={styles.layoutHeader}>
         <div className={styles.logo} onClick={goHome}>
-          <img src={`${theme === 'dark' ? '/imgs/mars-logo-dark.png' : '/imgs/mars-logo.png'}`} width={42} />
-          <span>Marsview</span>
+          <img src="/imgs/x-lowcode-logo.svg" width={42} />
+          <span>X-Lowcode</span>
         </div>
         {/* 首页 - 导航菜单 */}
         {isNav && (
@@ -253,30 +253,7 @@ const Header = memo(() => {
         {/* 用户信息&发布&发布记录 */}
         <div className={styles.user}>
           <Space>
-            {isEditPage ? null : (
-              <>
-                <Popover
-                  placement="bottom"
-                  content={
-                    <>
-                      <img width={150} src={`https://imgcloud.cdn.bcebos.com/f35323e9a2625a85909cb6f02.png`} />
-                      <p style={{ textAlign: 'center' }}>请备注：marsview</p>
-                    </>
-                  }
-                >
-                  <Button type="text" style={{ color: 'var(--mars-theme-text-color)' }}>
-                    联系我
-                  </Button>
-                </Popover>
-                <Button
-                  type="text"
-                  style={{ color: 'var(--mars-theme-text-color)' }}
-                  onClick={() => window.open('http://docs.marsview.com.cn', '_blank')}
-                >
-                  帮助文档
-                </Button>
-              </>
-            )}
+            {isEditPage ? null : null}
             <Switch
               checkedChildren={<MoonFilled />}
               unCheckedChildren={<SunOutlined />}
@@ -358,7 +335,7 @@ const Header = memo(() => {
                   width="40"
                   height="40"
                   viewBox="0 0 250 250"
-                  style={{ fill: '#7d33ff', color: '#fff', position: 'absolute', top: 0, border: 0, right: 0 }}
+                  style={{ fill: '#1890ff', color: '#fff', position: 'absolute', top: 0, border: 0, right: 0 }}
                   aria-hidden="true"
                 >
                   <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" />

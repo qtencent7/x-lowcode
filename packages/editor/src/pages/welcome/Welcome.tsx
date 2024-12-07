@@ -36,8 +36,8 @@ export default function Welcome() {
         }}
       >
         <div className={style.logo}>
-          <img src="/imgs/mars-logo-dark.png" width="40" />
-          <span>Marsview</span>
+          <img src="/imgs/x-lowcode-logo.svg" width="40" />
+          <span>X-Lowcode</span>
         </div>
         <div className={style.doc}>
           <a href="http://docs.marsview.com.cn" target="_blank">
@@ -59,7 +59,7 @@ export default function Welcome() {
       <section className={style.bg}>
         <canvas id="canvasBox" className={style.canvas}></canvas>
         <div className={style.content}>
-          <h1 className={style.title}>Marsview 低代码搭建</h1>
+          <h1 className={style.title}>X-Lowcode 低代码搭建</h1>
           <p className={style.desc}>让搭建更简单，让开发更高效</p>
           <div className={style.count}>
             服务 <CountUp end={2000} duration={3} />+ 项目，
@@ -263,15 +263,15 @@ export default function Welcome() {
         </div>
       </section>
       <section className={style.footer}>
-        <img src="/imgs/mars-logo-dark.png" />
-        <h1>欢迎使用 Marsview 零代码搭建平台</h1>
+        <img src="/imgs/x-lowcode-logo.svg" />
+        <h1>欢迎使用 X-Lowcode 零代码搭建平台</h1>
         <Link to="/projects">
           <Button type="primary" size="large">
             快速开始
           </Button>
         </Link>
         <p className={style.beian}>
-          <span>Copyright © 2024</span>
+          <span>Copyright 2024</span>
           <a href="https://beian.miit.gov.cn/#/Integrated/index">
             {location.hostname === 'www.marsview.com.cn' ? '沪ICP备2024101697号-1' : '京ICP备14041985号-2'}
           </a>
